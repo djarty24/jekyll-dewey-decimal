@@ -1,10 +1,15 @@
 # jekyll-dewey-decimal
 
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
+📖 A content-first, minimal personal weblog and portfolio.
 
-To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
+![Screenshot](https://raw.githubusercontent.com/djarty24/jekyll-dewey-decimal/master/screenshot.png)
 
-TODO: Delete this and the text above, and describe your gem
+## Contents
+- [Installation](#installation)
+- [Customizing](#customizing)
+- [Page Layouts](#page-layouts)
+- [Site Settings](#site-settings)
+- [License](#license)
 
 ## Installation
 
@@ -17,7 +22,7 @@ gem "jekyll-dewey-decimal"
 And add this line to your Jekyll site's `_config.yml`:
 
 ```yaml
-theme: jekyll-dewey-decimal
+theme: jekyll-simple-blue
 ```
 
 And then execute:
@@ -28,22 +33,29 @@ Or install it yourself as:
 
     $ gem install jekyll-dewey-decimal
 
-## Usage
+## Customizing
 
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
+Using dewey as a theme means you can take advantage of the file overriding method. This allows you to overwrite any file in this theme with your own custom file, by matching the file name and path. The most common example of this would be if you want to add your own styles or change the core style settings.
 
-## Contributing
+To add your own styles copy the [`styles.css`](https://github.com/djarty24/jekyll-dewey-decimal/raw/main/assets/styles.css) into your own project with the same file path (`assets/styles.css`). From there you can add your own styles, and modify or even remove existing ones.
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/jekyll-dewey-decimal. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://www.contributor-covenant.org/) code of conduct.
+## Page-Layouts
 
-## Development
+There are 3 layouts; `page`, `post`, and `home` (home acts as the front page blog).
 
-To set up your environment to develop this theme, run `bundle install`.
+## Site-Settings
 
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+To modify set parameters, you need to modify the `_config.yml` `title` and `url`.
 
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `jekyll-dewey-decimal.gemspec` accordingly.
+Additionally, you need to add the following parameters to edit the author name and email.
+
+```yaml
+author:
+    name: Your name
+    email: Your email
+```
+
+To add your resume, favicon, and a custom profile photo, simply copy them into the root folder with the names `resume.pdf`, `favicon.ico`, and `profile.png`.
 
 ## License
 
