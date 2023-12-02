@@ -4,3 +4,9 @@ author:
   name: AUTHOR_NAME
   email: EMAIL@EXAMPLE.COM
 copyright_year: YEAR
+
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
