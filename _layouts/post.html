@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<article class="post-wrapper">
+  <section class="post-content">
+    <h1>{{ page.title }}</h1>
+    {% if page.date %}
+      <p class="meta" style="color: #696969;"><span style="font-style: italic;">{{ page.date | date_to_string }}</span> | {{ site.author.name }}</p>
+    {% endif %}
+    {{ content }}
+    {% if page.tags.size > 0 %}
+    <div class="post-tags">
+      <p class="meta">
+        {% if page.tags.size > 1 %}
+        TAGS:
+        {% else %}
+        TAG:
+        {% endif %}
+        {% for tag in page.tags %}
+          <a href="/tags.html#{{tag}}" title="tags">{{tag}}</a>
+        {% endfor %}
+      </p>
+    </div>
+    {% endif %}
+  </section>
+  <div class="backwards-link">
+    <p>« <a href="{{ '/' | relative_url }}" class="hard-anchor" title="main-page">Back</a></p>
+  </div>
+</article>
