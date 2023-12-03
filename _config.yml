@@ -3,6 +3,7 @@ description: SITE_DESCRIPTION
 author:
   name: AUTHOR_NAME
   email: EMAIL@EXAMPLE.COM
+  github: GITHUB_PAGE_URL
 copyright_year: YEAR
 
 markdown: kramdown

@@ -47,15 +47,16 @@ There are 3 layouts; `page`, `post`, and `home` (home acts as the front page blo
 
 To modify set parameters, you need to modify the `_config.yml` `title` and `url`.
 
-Additionally, you need to add the following parameters to edit the author name and email.
+Additionally, you need to add the following parameters to edit the author name and email. You should also add your github profile.
 
 ```yaml
 author:
     name: Your name
     email: Your email
+    github: Your github profile url
 ```
 
-To add your resume, favicon, and a custom profile photo, simply copy them into the root folder with the names `resume.pdf`, `favicon.ico`, and `profile.png`.
+To add your favicon, and to add a custom profile photo, simply copy them into the root folder with the names `favicon.ico`, and `profile.png`.
 
 ## License
 
