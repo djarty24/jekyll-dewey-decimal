@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-dewey-decimal"
-  spec.version       = "0.1.2"
+  spec.version       = "0.1.3"
   spec.authors       = ["Revati Tambe"]
   spec.email         = ["109561627+djarty24@users.noreply.github.com"]
 

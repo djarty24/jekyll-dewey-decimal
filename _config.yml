@@ -1,13 +1,28 @@
 title: SITE_TITLE
 description: SITE_DESCRIPTION
+copyright_year: YEAR
+
 author:
   name: AUTHOR_NAME
   email: EMAIL@EXAMPLE.COM
   github: GITHUB_PAGE_URL
-copyright_year: YEAR
+  website: YOUR_WEBSITE.COM
+  
+
+data:
+  job_title: JOB_TITLE
+  skills:
+    skill1:
+      name: "Skill #1"
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+    skill2:
+      name: "Skill #2"
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+    skill3:
+      name: "Skill #2"
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
 
 markdown: kramdown
-
 kramdown:
   input: GFM
   syntax_highlighter: rouge

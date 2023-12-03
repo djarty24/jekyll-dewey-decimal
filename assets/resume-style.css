@@ -1,0 +1,40 @@
+.resume-header-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.resume-header-container h1{
+    font-size: 22px;
+}
+
+.resume-header-container h2{
+    font-weight: 400;
+    font-size: 19px;
+}
+
+.resume-header-container .resume-header-right ul{
+    list-style-type: none;
+}
+
+.resume-header-container .resume-header-right ul li{
+    line-height: 1.25em;
+}
+
+.resume-header-container .resume-header-right ul li a{
+    color: #000000;
+    text-decoration: none;
+}
+
+.resume-skills-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.resume-skills-container h3{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.resume-skills-container .resume-skills-right{
+    width: 70%;
+}
