@@ -2,7 +2,7 @@
 
 📖 A content-first, minimal personal weblog and portfolio.
 
-![Screenshot](https://raw.githubusercontent.com/djarty24/jekyll-dewey-decimal/master/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/djarty24/jekyll-dewey-decimal/master/assets/img/screenshot.png)
 
 ## Contents
 - [Installation](#installation)
