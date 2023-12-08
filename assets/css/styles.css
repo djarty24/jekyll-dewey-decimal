@@ -1,119 +1,144 @@
-*{
+:root {
+    --black: #000000;
+    --hover-blue: #B9E7FA;
+    --hover-gray: #696969;
+}
+
+* {
     font-family: 'Inconsolata', monospace;
 }
 
-.container{
-    margin-left: 25%;
-    margin-right: 25%;
+.--font-size-scale-small{
+    font-size: 17px;
 }
 
-.header-container{
-    padding-top: 20px;
-    font-size: 17px;
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+        ". navbar ."
+        ". content ."
+        ". footer ."
+    ;
+
+    /* Extra small devices (phones, 600px and down) */
+    @media only screen and (max-width: 600px) { grid-template-columns: 1fr 10fr 1fr; }
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) { grid-template-columns: 1fr 8fr 1fr; }
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) { grid-template-columns: 1fr 5fr 1fr; }
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) { grid-template-columns: 1fr 2fr 1fr; }
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) { grid-template-columns: 1fr 2fr 1fr; }
+
+}
+
+nav {
+    grid-area: navbar;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
-.header-container ul{
-    margin-left: 0;
-    padding: 0;
+nav ul {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-.header-container ul li{
-    display: inline-block;
+nav ul li {
+    display: inline;
 }
 
-.header-container ul li a{
-    color: #000000;
-    display: block;
+nav ul li a {
     text-decoration: none;
+    color: var(--black);
 }
 
-.header-container ul li a:hover{
-    color: #696969;
+nav ul li a:hover {
+    color: var(--hover-gray);
 }
 
-.profile-container {
+.toggle-button {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 2px;
+    width: 100%;
+    background-color: var(--black);
+    border-radius: 20px;
+}
+
+.nav-links-responsive {
+    display: flex;
     padding-top: 20px;
-    padding-bottom: 20px;
-    text-align: center;
+    flex-direction: column;
+    text-align: right;
+    line-height: 1.5rem;
 }
 
-.profile-container img{
+@media only screen and (max-width: 600px) {
+    .nav-left{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+    .toggle-button { display: flex; }
+    
+    .nav-links { display: none; }
+}
+
+@media only screen and (min-width: 600px) {
+    .toggle-button { display: none; }
+    .nav-links { display: inline; }
+}
+
+footer {
+    grid-area: footer;
+    padding-top: 20px;
+}
+
+.content {
+    grid-area: content;
+}
+
+.profile {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.profile img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 13%;
+    width: 100px;
 }
 
-.profile-container h2{
-    font-size: 17px;
-    font-weight: 600;
-}
-
-.profile-container h3{
-    font-style: italic;
-    font-size: 15px;
-    font-weight: 400;
-}
-
-.post-list-container h2{
-    font-size: 17px;
-    font-weight: 600;
-}
-
-.post-list-container .posts-list{
+.posts ul {
+    list-style-type: none;
     margin: 0;
     padding: 0;
-    font-size: 17px;
 }
 
-.post-list-container .posts-list li{
+.posts ul li {
     padding-top: 5px;
     padding-bottom: 5px;
-    list-style-type: none;
+    margin-bottom: 2px;
 }
 
-.post-list-container .posts-list li:hover{
-    background-color: #B9E7FA;
+.posts ul li:hover {
+    background-color: var(--hover-blue);
 }
 
-.post-list-container .posts-list li a{
-    color: #000000;
+.posts ul li a {
     text-decoration: none;
-}
-
-.post-wrapper .post-content h1{
-    font-weight: 600;
-}
-
-.post-wrapper .post-content .post-tags{
-    padding-top: 20px;
-}
-
-.post-wrapper .post-content .post-tags a{
-    padding-left: 5px;
-    padding-right: 5px;
-    text-decoration: none;
-    background-color: #B9E7FA;
-    color: #000000;
-}
-
-.backwards-link a{
-    text-decoration: none;
-    color: #000000;
-}
-
-.backwards-link a:hover{
-    text-decoration: none;
-    color: #696969;
-}
-
-.footer{
-    padding-top: 20px;
-    font-size: 14px;
+    color: var(--black);
 }
 
 .footer a{

@@ -1,11 +1,11 @@
 ---
 layout: default
 ---
-<div class="profile-container">
-    <h2>{{ site.author.name }}</h2>
+<div class="profile">
+    <h2 class="--font-size-scale-small" style="font-weight: 600;">{{ site.author.name }}</h2>
     <img src="/assets/img/profile.png" alt="">
-    <h3>Welcome to my space on<br>the Internet.</h3>
+    <h3 class="--font-size-scale-small" style="font-style: italic; font-weight: 400;">Welcome to my space on<br>the internet.</h3>
 </div>
-<div class="posts-container">
+<div class="posts">
     {% include post-list.html %}
-</div>
+</div>    
